@@ -36,4 +36,3 @@ export const Sidebar = ({ className }: SidebarProps) => {
         </div>
     );
 };
-//pull
