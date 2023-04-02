@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/storybook/ThemeDecorator/ThemeDecorator';
-import {Loader} from './Loader';
+import { Loader } from './Loader';
 
 export default {
     title: 'shared/Loader',
@@ -11,8 +11,8 @@ export default {
         backgroundColor: { control: 'color' },
     },
     args: {
-        to: '/'
-    }
+        to: '/',
+    },
 } as ComponentMeta<typeof Loader>;
 
 const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
@@ -23,5 +23,3 @@ Normal.args = {};
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-

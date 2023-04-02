@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/storybook/ThemeDecorator/ThemeDecorator';
-import {AppLink, AppLinkTheme} from './AppLink';
+import { AppLink, AppLinkTheme } from './AppLink';
 
 export default {
     title: 'shared/AppLink',
@@ -11,8 +11,8 @@ export default {
         backgroundColor: { control: 'color' },
     },
     args: {
-        to: '/'
-    }
+        to: '/',
+    },
 } as ComponentMeta<typeof AppLink>;
 
 const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />;
