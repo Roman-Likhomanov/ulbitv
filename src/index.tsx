@@ -7,8 +7,6 @@ import 'app/styles/index.scss';
 import 'shared/config/i18n/i18n'; // импортируем конфигурацию переводчика
 import { ErrorBoundary } from './app/providers/ErrorBoundary';
 
-
-
 render(
     <StoreProvider>
         <BrowserRouter>
