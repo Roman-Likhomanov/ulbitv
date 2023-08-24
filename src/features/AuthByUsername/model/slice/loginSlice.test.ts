@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit';
 import { LoginSchema } from 'features/AuthByUsername';
 import { loginActions, loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 
@@ -19,3 +18,5 @@ describe('loginSlice.test', () => {
         )).toEqual({ password: '123123' });
     });
 });
+
+// 8 56
