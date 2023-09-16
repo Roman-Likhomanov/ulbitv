@@ -10,7 +10,6 @@ export const fetchProfileData = createAsyncThunk<Profile, void, ThunkConfig<stri
         const { extra, dispatch, rejectWithValue } = thunkAPI;
         try {
             const response = await extra.api.get<Profile>('/profile');
-
             return response.data;
         } catch (e) {
             console.log(e);
@@ -18,5 +17,3 @@ export const fetchProfileData = createAsyncThunk<Profile, void, ThunkConfig<stri
         }
     },
 );
-
-// 10 20
