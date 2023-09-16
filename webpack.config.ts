@@ -24,5 +24,6 @@ export default (env: BuildEnv) => {
         port: PORT,
         apiUrl,
     });
+
     return config;
 };

@@ -1,18 +1,22 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { Text } from 'shared/ui/Text/Text';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
 import { getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useCallback } from 'react';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
-    className?: string
+    className?: string;
 }
 
-export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
+export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
+    const {
+        className,
+    } = props;
+
     const { t } = useTranslation('profile');
 
     const readonly = useSelector(getProfileReadonly);
@@ -22,7 +26,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
         dispatch(profileActions.setReadonly(false));
     }, [dispatch]);
 
-    const onCanselEdit = useCallback(() => {
+    const onCancelEdit = useCallback(() => {
         dispatch(profileActions.cancelEdit());
     }, [dispatch]);
 
@@ -48,7 +52,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
                         <Button
                             className={cls.editBtn}
                             theme={ButtonTheme.OUTLINE_RED}
-                            onClick={onCanselEdit}
+                            onClick={onCancelEdit}
                         >
                             {t('Отменить')}
                         </Button>
@@ -61,7 +65,6 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
                         </Button>
                     </>
                 )}
-
         </div>
     );
 };

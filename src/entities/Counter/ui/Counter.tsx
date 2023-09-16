@@ -8,6 +8,7 @@ export const Counter = () => {
     const dispatch = useDispatch();
     const counterValue = useSelector(getCounterValue);
     const { t } = useTranslation();
+
     const increment = () => {
         dispatch(counterActions.increment());
     };
@@ -26,8 +27,8 @@ export const Counter = () => {
                 {t('increment')}
             </Button>
             <Button
-                onClick={decrement}
                 data-testid="decrement-btn"
+                onClick={decrement}
             >
                 {t('decrement')}
             </Button>

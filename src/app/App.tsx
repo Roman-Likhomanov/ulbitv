@@ -7,7 +7,7 @@ import { Sidebar } from 'widgets/Sidebar';
 import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
 
-const App = () => {
+function App() {
     const { theme } = useTheme();
     const dispatch = useDispatch();
 
@@ -26,6 +26,6 @@ const App = () => {
             </Suspense>
         </div>
     );
-};
+}
 
 export default App;

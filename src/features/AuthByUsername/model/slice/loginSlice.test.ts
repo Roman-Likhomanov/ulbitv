@@ -1,5 +1,5 @@
-import { LoginSchema } from 'features/AuthByUsername';
-import { loginActions, loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
+import { LoginSchema } from '../types/loginSchema';
+import { loginActions, loginReducer } from './loginSlice';
 
 describe('loginSlice.test', () => {
     test('test set username', () => {
@@ -18,5 +18,3 @@ describe('loginSlice.test', () => {
         )).toEqual({ password: '123123' });
     });
 });
-
-// 8 56
